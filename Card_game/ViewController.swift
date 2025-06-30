@@ -8,12 +8,38 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    
+    @IBOutlet weak var east: UIImageView!
+    @IBOutlet weak var west: UIImageView!
+    var name = true
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-    }
+        east.image = UIImage(named: "east")
+        west.image = UIImage(named: "west")
 
+        
+    }
+    
+    
+    @IBAction func startGame(_ sender: Any) {
+        if(name){
+           goToSecondScreen()
+
+        }else{
+           print("You must select a card before continuing.")
+
+        }
+        
+    }
+    func  goToSecondScreen(){
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let gameVC = storyboard.instantiateViewController(withIdentifier: "GameController") as! GameController
+        self.present(gameVC, animated: true, completion: nil)
+    }
+    
 
 }
 
