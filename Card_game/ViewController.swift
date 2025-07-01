@@ -17,9 +17,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        east.image = UIImage(named: "east")
-        west.image = UIImage(named: "west")
-
+       // background.image = UIImage(named: "background")
+        //east.image = UIImage(named: "east")
+       // west.image = UIImage(named: "west")
         
     }
     
