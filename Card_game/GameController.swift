@@ -17,7 +17,7 @@ class GameController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        background.image = UIImage(named: "background")
+        //background.image = UIImage(named: "background")
      
         changeIcon(stop: isStop)
     
