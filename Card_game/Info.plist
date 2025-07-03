@@ -2,6 +2,13 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>We need your location to determine your side in the game
+We need your location to determine your side in the game
+We need your location to determine your side in the game
+</string>
+	<key>CFBundleIdentifier</key>
+	<string></string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -21,5 +28,7 @@
 			</array>
 		</dict>
 	</dict>
+	<key>CFBundleExecutable</key>
+	<string></string>
 </dict>
 </plist>

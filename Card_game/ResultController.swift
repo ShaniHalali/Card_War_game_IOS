@@ -9,13 +9,18 @@ import UIKit
 
 class ResultController: UIViewController {
     var finalScore: Int = 0
+    var winner: String?
+    @IBOutlet weak var theWinner: UILabel!
+    
+    @IBOutlet weak var name: UILabel!
     @IBOutlet weak var score: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        score.text = "Your Score: " + "\(finalScore)"
+        name.text = winner ?? "Unknown"
+        score.text = "Your Score: \(finalScore)"
     }
     
     @IBAction func backToMenu(_ sender: Any) {

@@ -17,7 +17,7 @@ class GameController: UIViewController {
     var pauseTimer: Timer?
     var currentCount = 5
     var repeatCount = 1
-    let maxRepeats = 2
+    let maxRepeats = 11
     
     @IBOutlet weak var round: UILabel!
     @IBOutlet weak var eastCard: UIImageView!
@@ -28,6 +28,15 @@ class GameController: UIViewController {
     var west = 0
     var east = 0
     var cards = [#imageLiteral(resourceName: "card1"),#imageLiteral(resourceName: "card1"),#imageLiteral(resourceName: "card2"),#imageLiteral(resourceName: "card3"),#imageLiteral(resourceName: "card4"),#imageLiteral(resourceName: "card5"),#imageLiteral(resourceName: "card6"),#imageLiteral(resourceName: "card7"),#imageLiteral(resourceName: "card8"),#imageLiteral(resourceName: "card9"),#imageLiteral(resourceName: "card10"),#imageLiteral(resourceName: "card11"),#imageLiteral(resourceName: "card12"),#imageLiteral(resourceName: "card13"),#imageLiteral(resourceName: "joker")]
+    var name: String?
+    var userSide: String?
+    
+   // @IBOutlet weak var eastPlayer: UILabel!
+    @IBOutlet weak var eastPlayer: UILabel!
+    
+    @IBOutlet weak var westPlayer: UILabel!
+    var playerOnEast: String?
+    var playerOnWest: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,11 +45,35 @@ class GameController: UIViewController {
         //background.image = UIImage(named: "background")
         
         changeIcon(stop: isStop)
+        userPlaySide()
         westScore.text = String(west)
         eastScore.text = String(east)
         startCountdown()
 
     }
+    func userPlaySide(){
+        if (userSide == nil){
+            print("use side = \(userSide)")
+        }
+        print("use side = \(userSide)")
+
+        if(userSide == "East"){
+            playerOnEast = name
+            eastPlayer.text = playerOnEast
+            playerOnWest = "PC"
+            westPlayer.text = playerOnWest
+
+        }else if (userSide == "West"){
+            playerOnWest = name
+            westPlayer.text = playerOnWest
+            playerOnEast = "PC"
+            eastPlayer.text = playerOnEast
+
+
+        }
+        
+    }
+    
     func changeIcon(stop: Bool){
         var playIcon: UIImage?
 
@@ -134,9 +167,15 @@ class GameController: UIViewController {
         // Pass the scores
         if(east > west){
             resultVC.finalScore = self.east
+            resultVC.winner = self.playerOnEast
 
-        }else{
+        }else if (west > east){
             resultVC.finalScore = self.west
+            resultVC.winner = self.playerOnWest
+
+        }else if (west == east){
+            resultVC.finalScore = self.west
+            resultVC.winner = self.name
 
         }
 
