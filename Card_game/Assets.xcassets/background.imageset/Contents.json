@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "background.png",
+      "filename" : "darkback.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -12,7 +12,7 @@
           "value" : "dark"
         }
       ],
-      "filename" : "darkback.png",
+      "filename" : "ChatGPT Image Jul 3, 2025, 12_15_55 PM.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
