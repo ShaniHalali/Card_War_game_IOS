@@ -12,15 +12,22 @@ class GameController: UIViewController {
     @IBOutlet weak var pause: UIButton!
     @IBOutlet weak var background: UIImageView!
     var isStop = true
+    @IBOutlet weak var timerLabel: UILabel!
+    var countdownTimer: Timer?
+    var pauseTimer: Timer?
+    var currentCount = 5
+    var repeatCount = 0
+    let maxRepeats = 10
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         //background.image = UIImage(named: "background")
-     
+        
         changeIcon(stop: isStop)
-    
+        startCountdown()
+
     }
     func changeIcon(stop: Bool){
         var playIcon: UIImage?
@@ -43,6 +50,31 @@ class GameController: UIViewController {
         changeIcon(stop: isStop)
         
     }
+    
+    func startCountdown() {
+            currentCount = 5
+            timerLabel.text = "\(currentCount)"
+            countdownTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
+                self.currentCount -= 1
+                self.timerLabel.text = "\(self.currentCount)"
+                if self.currentCount == 0 {
+                    timer.invalidate()
+                    self.handlePause()
+                }
+            }
+        }
+
+        func handlePause() {
+            repeatCount += 1
+            if repeatCount >= maxRepeats {
+                timerLabel.text = "Done!"
+                return
+            }
+
+            pauseTimer = Timer.scheduledTimer(withTimeInterval: 3.0, repeats: false) { _ in
+                self.startCountdown()
+            }
+        }
     /*
     // MARK: - Navigation
 

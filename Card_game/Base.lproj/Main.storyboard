@@ -50,7 +50,7 @@
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hii Guest" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7sH-rG-s1y">
-                                        <rect key="frame" x="85.000000000000014" y="73" width="130.33333333333337" height="30"/>
+                                        <rect key="frame" x="85" y="73" width="130.33333333333337" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="VNr-sM-rbf">
                                                 <variation key="heightClass=regular-widthClass=compact" constant="30"/>
@@ -184,9 +184,9 @@
                         </constraints>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="constraints">
+                                <include reference="uKD-Ej-DVt"/>
                                 <include reference="3tL-Ag-EoZ"/>
                                 <include reference="xAV-MQ-rSi"/>
-                                <include reference="uKD-Ej-DVt"/>
                             </mask>
                         </variation>
                     </view>
@@ -261,7 +261,7 @@
                                             <constraint firstItem="Uih-Xj-LXq" firstAttribute="top" secondItem="F6d-yB-FZC" secondAttribute="top" constant="90" id="Fhy-EH-m0o">
                                                 <variation key="heightClass=regular-widthClass=compact" constant="150"/>
                                             </constraint>
-                                            <constraint firstItem="Uih-Xj-LXq" firstAttribute="top" secondItem="4fB-Gn-yvg" secondAttribute="bottom" constant="39.670000000000002" id="KjF-oK-3xH">
+                                            <constraint firstItem="Uih-Xj-LXq" firstAttribute="top" secondItem="4fB-Gn-yvg" secondAttribute="bottom" constant="40" id="KjF-oK-3xH">
                                                 <variation key="heightClass=regular-widthClass=compact" constant="10"/>
                                             </constraint>
                                             <constraint firstItem="eJI-aP-Pst" firstAttribute="top" secondItem="4fB-Gn-yvg" secondAttribute="bottom" constant="10" id="fEM-pb-8b0"/>
@@ -354,6 +354,7 @@
                                             <constraint firstItem="2kV-Ok-485" firstAttribute="top" secondItem="zPN-Ha-8BN" secondAttribute="bottom" constant="180" id="I5H-nU-D1q">
                                                 <variation key="heightClass=regular-widthClass=compact" constant="200"/>
                                             </constraint>
+                                            <constraint firstAttribute="trailing" secondItem="zPN-Ha-8BN" secondAttribute="trailing" constant="10" id="IBc-dP-GVp"/>
                                             <constraint firstItem="2kV-Ok-485" firstAttribute="leading" secondItem="1tQ-eY-6sR" secondAttribute="leading" constant="83" id="fcz-rS-7E8">
                                                 <variation key="heightClass=regular-widthClass=compact" constant="35"/>
                                             </constraint>
@@ -439,14 +440,23 @@
                                             <constraint firstItem="tro-Cj-LwV" firstAttribute="leading" secondItem="rZR-2Q-7L2" secondAttribute="leading" constant="10" id="IIa-dS-JqA">
                                                 <variation key="heightClass=regular-widthClass=compact" constant="10"/>
                                             </constraint>
+                                            <constraint firstItem="onc-a3-AZo" firstAttribute="top" secondItem="tCV-cq-IIW" secondAttribute="bottom" id="KLw-g9-UO6"/>
                                             <constraint firstItem="onc-a3-AZo" firstAttribute="centerX" secondItem="rZR-2Q-7L2" secondAttribute="centerX" id="SG2-8A-tgp"/>
                                             <constraint firstItem="tro-Cj-LwV" firstAttribute="top" secondItem="rZR-2Q-7L2" secondAttribute="top" constant="10" id="ahz-Rk-ENa"/>
-                                            <constraint firstItem="onc-a3-AZo" firstAttribute="top" secondItem="tCV-cq-IIW" secondAttribute="bottom" id="pHq-e9-ie1"/>
+                                            <constraint firstItem="onc-a3-AZo" firstAttribute="top" secondItem="tCV-cq-IIW" secondAttribute="bottom" constant="60" id="pHq-e9-ie1">
+                                                <variation key="heightClass=compact-widthClass=regular" constant="0.0"/>
+                                            </constraint>
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">
                                                 <exclude reference="6uP-ug-L4S"/>
                                                 <exclude reference="9bN-Sl-QbS"/>
+                                                <exclude reference="pHq-e9-ie1"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <mask key="constraints">
+                                                <exclude reference="pHq-e9-ie1"/>
                                             </mask>
                                         </variation>
                                         <variation key="heightClass=regular-widthClass=compact">
@@ -492,11 +502,12 @@
                     <connections>
                         <outlet property="background" destination="kq1-U6-LXD" id="lAD-wL-7jg"/>
                         <outlet property="pause" destination="2kV-Ok-485" id="ssV-e1-42I"/>
+                        <outlet property="timerLabel" destination="UbC-F3-4sE" id="56e-Ac-kXw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dzq-Lu-YTu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="804" y="723"/>
+            <point key="canvasLocation" x="803.81679389312978" y="722.53521126760563"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="jYO-Wc-0Lr">
@@ -519,7 +530,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shani" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cob-xI-AzF">
-                                <rect key="frame" x="120.00000000000001" y="390" width="153.33333333333337" height="72"/>
+                                <rect key="frame" x="120" y="390" width="153.33333333333337" height="72"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="80"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
