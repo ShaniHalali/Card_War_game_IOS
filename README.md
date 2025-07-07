@@ -41,7 +41,7 @@ The app follows **MVC (Model-View-Controller)** design:
 
 ## 🔊 Sound Manager
 
-- A custom `SoundManager.swift` class manages background music and sound effects with AVFoundation.
+- A custom SoundManager.swift class manages background music and sound effects with AVFoundation.
 - Music plays in a loop and volume can be adjusted.
 
 ## 📍 Location Manager
