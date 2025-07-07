@@ -106,8 +106,11 @@ class GameController: UIViewController {
                    pauseTimer?.invalidate()
                    countdownTimer = nil
                    pauseTimer = nil
+                   SoundManager.stopLooped()
+
                } else {
                    startCountdown()
+                   SoundManager.playLooped(soundName: "game_sound")
                }
         
     }
