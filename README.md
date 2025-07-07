@@ -4,6 +4,8 @@ Welcome to **Card War**, an iOS application developed using Swift and UIKit, whe
 - Watch it now !
   [Full Game Record](https://www.youtube.com/watch?v=rat8DN_isas)
 
+  <img src="https://github.com/user-attachments/assets/82155cc9-41e7-4491-b439-a3dc079e44fa" alt="Permissions" width="20%" height="20%">
+
 ## 📱 Features
 
 - 🎮 Classic *War* style card gameplay: player vs computer
