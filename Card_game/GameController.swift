@@ -19,7 +19,7 @@ class GameController: UIViewController {
     var pauseTimer: Timer?
     var currentCount = 5
     var repeatCount = 1
-    let maxRepeats = 3
+    let maxRepeats = 11
     
     @IBOutlet weak var round: UILabel!
     @IBOutlet weak var westCard: UIImageView!
