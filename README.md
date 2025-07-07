@@ -1,6 +1,8 @@
 # 🃏 Card War Game – iOS App
 
 Welcome to **Card Game**, an iOS application developed using Swift and UIKit, where players engage in a fast-paced battle of cards. The game includes custom graphics, a scoring system, and a user-friendly experience built with the MVC design pattern.
+- Watch it now !
+  [Full Game Record](https://www.youtube.com/watch?v=rat8DN_isas)
 
 ## 📱 Features
 
@@ -52,6 +54,9 @@ This decision affects which side you're displayed on in the game.
 The app requests access to the user's **location** using Core Location, solely for the purpose of determining whether the user is located in the northern or southern hemisphere. This information is used to personalize the UI by setting the player to the East or West side accordingly.
 
 📌 No location data is stored, tracked, or shared with third parties.
+
+<img src="https://github.com/user-attachments/assets/40ccde9b-d5aa-45d5-a225-6aea78e61308" alt="Permissions" width="10%" height="10%">
+
 
 ## 🎆 Visual Effects
 A confetti effect is triggered when the player wins.
