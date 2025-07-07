@@ -54,6 +54,8 @@ class GameController: UIViewController {
         eastScore.text = String(east)
         westScore.text = String(west)
         startCountdown()
+        SoundManager.playLooped(soundName: "game_sound")
+
 
     }
     func userPlaySide(){
@@ -117,7 +119,8 @@ class GameController: UIViewController {
             round.text = "Round: " + "\(repeatCount)"
         
         if(!firstFlip){
-            self.playCardFlipSound()
+            SoundManager.play(soundName: "flipcard")
+
         }
         firstFlip = false
 
@@ -134,7 +137,8 @@ class GameController: UIViewController {
                 self.timerLabel.text = "\(self.currentCount)"
                 if self.currentCount == 0 {
                     timer.invalidate()
-                    self.playCardFlipSound()
+                    SoundManager.play(soundName: "flipcard")
+
                     let eastIndex = Int.random(in: 0..<self.cards.count)
                     let westIndex = Int.random(in: 0..<self.cards.count)
 
@@ -194,21 +198,10 @@ class GameController: UIViewController {
             resultVC.winner = self.name
 
         }
+        SoundManager.stopLooped() 
         self.present(resultVC, animated: true, completion: nil)
     }
-    func playCardFlipSound() {
-        guard let url = Bundle.main.url(forResource: "flipcard", withExtension: "mp3") else {
-            print("Sound file not found")
-            return
-        }
 
-        do {
-            cardFlipSound = try AVAudioPlayer(contentsOf: url)
-            cardFlipSound?.play()
-        } catch {
-            print("Error playing sound: \(error.localizedDescription)")
-        }
-    }
 
 
     /*

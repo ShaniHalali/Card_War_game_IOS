@@ -30,5 +30,9 @@ We need your location to determine your side in the game
 	</dict>
 	<key>CFBundleExecutable</key>
 	<string></string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleDisplayName</key>
+	<string>Card War</string>
 </dict>
 </plist>

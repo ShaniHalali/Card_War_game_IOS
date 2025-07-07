@@ -30,16 +30,13 @@ class ResultController: UIViewController {
         // Do any additional setup after loading the view.
         name.text = winner ?? "Unknown"
         if(winner == "PC"){
-           // soundName = loseSoundName
-            soundEvent(soundName: loseSoundName)
+            SoundManager.play(soundName: loseSoundName)
         }
         if (winner != "PC"){
-          //  soundName = winSoundName
-            soundEvent(soundName: winSoundName)
+            SoundManager.play(soundName: winSoundName)
             showConfetti()
 
         }
-       // soundEvent(soundName: soundName)
 
         score.text = "Your Score: \(finalScore)"
     }
@@ -50,21 +47,6 @@ class ResultController: UIViewController {
         self.present(startVC, animated: true, completion: nil)
     }
    
-    func soundEvent(soundName: String) {
-        guard let url = Bundle.main.url(forResource: soundName, withExtension: "mp3") else {
-            print("Sound file not found")
-            return
-        }
-
-        do {
-            loseSound = try AVAudioPlayer(contentsOf: url)
-            loseSound?.play()
-        } catch {
-            print("Error playing sound: \(error.localizedDescription)")
-        }
-    }
-       
-     
        
        func showConfetti() {
            // Create the emitter layer that will emit the particles (confetti)
