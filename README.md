@@ -72,7 +72,7 @@ Clean animations for card flip backs after each round.
 ## Horizontally – Dark Mode
 <img src="https://github.com/user-attachments/assets/40a304ec-3e57-402f-8006-24b02cef14ce" alt="WelcomeController" width="30%" height="30%">
 <img src="https://github.com/user-attachments/assets/c0080584-61e6-4d6f-94f0-6c33fb00aa2c" alt="GameController" width="30%" height="30%">
-<img src="https://github.com/user-attachments/assets/7bfa419d-26e0-4094-8218-5dd354fee6b9" alt="ResultController" width="30%" height="30%">
+<img src="https://github.com/user-attachments/assets/7bfa419d-26e0-4094-8218-5dd354fee6b9" alt="ResultController" width="32%" height="35%">
 
 ## Vertically – Light Mode
 <img src="https://github.com/user-attachments/assets/0a7d1586-8025-4f43-96f7-96e9fef5f702" alt="WelcomeController" width="25%" height="15%">
