@@ -1,6 +1,6 @@
-# 🃏 Card War Game – iOS App
+# Card War Game – iOS App
 
-Welcome to **Card Game**, an iOS application developed using Swift and UIKit, where players engage in a fast-paced battle of cards. The game includes custom graphics, a scoring system, and a user-friendly experience built with the MVC design pattern.
+Welcome to **Card War**, an iOS application developed using Swift and UIKit, where players engage in a fast-paced battle of cards. The game includes custom graphics, a scoring system, and a user-friendly experience built with the MVC design pattern.
 - Watch it now !
   [Full Game Record](https://www.youtube.com/watch?v=rat8DN_isas)
 
